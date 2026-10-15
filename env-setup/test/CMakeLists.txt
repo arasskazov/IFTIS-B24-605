@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.20)
+project(thread_test CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(Threads REQUIRED)
+add_executable(thread_test main.cpp)
+target_link_libraries(thread_test PRIVATE Threads::Threads)
